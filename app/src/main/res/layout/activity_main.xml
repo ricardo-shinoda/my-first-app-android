@@ -1,50 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:padding="8dp"
-    android:layout_margin="10dp">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Digite o Estado:"
-        android:textSize="30sp" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Estado (sigla)" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Digite o Valor:"
-        android:textSize="30sp" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Valor (R$)" />
+    android:fillViewport="true">
     <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="10dp"
+            android:src="@drawable/tax2"
+            android:scaleType="centerCrop"
+            />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Porcentagem to ICMS"
-            android:textSize="30sp"
-            android:background="#BFA6E2"/>
+            android:text="Digite o Estado:"
+            android:textSize="30sp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Estado (sigla)" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="%"
-            android:textSize="30sp"
-            android:background="#BFA6E2"/>
+            android:text="Digite o Valor:"
+            android:textSize="30sp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor (R$)" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF9800"
+            android:orientation="vertical"
+            android:textAlignment="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Porcentagem to ICMS"
+                android:theme="@style/textoPadrao"
+                android:textSize="25sp"
+                android:padding="8dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/textoPadrao"
+                android:text="%"
+                android:textSize="25sp"
+                android:padding="8dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/textoPadrao"
+                android:text="Digite Valor total da Mercadoria"
+                android:textSize="25sp"
+                android:padding="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/textoPadrao"
+                android:text="R$ 0,00"
+                android:textSize="25sp"
+                android:padding="8dp"
+                />
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/black"
+            android:text="Calcular"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
     </LinearLayout>
-
-
-</LinearLayout>
+</ScrollView>
 
